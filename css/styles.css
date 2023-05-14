@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  /* general variables */
+  --boxShadow: 0 0 3px hsl(0, 42%, 85%);
+  --transition: all 0.5 linear;
+  --border: 2px solid lavender;
+
+  /* color variables for this project */
+  --White: hsl(0, 0%, 100%);
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+
+body {
+  display: grid;
+  font-family: "josefin sans";
+  height: 100vh;
+  margin: 0;
+  place-items: center;
+}
+
+section {
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  box-shadow: var(--boxShadow);
+  display: grid;
+  gap: 30px;
+  padding: 20px 0;
+  width: 375px;
+}
+
+nav {
+  padding: 0 2rem;
+}
+
+nav img {
+  width: 110px;
+}
+
+.img-mobile {
+  width: 100%;
+}
+
+.img-desktop {
+  display: none;
+}
+
+article {
+  display: grid;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+}
+
+.h1-highlighted {
+  color: var(--Desaturated-Red);
+  font-weight: 300;
+}
+
+article p:first-of-type {
+  color: var(--Desaturated-Red);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+label {
+  border-radius: 30px;
+  margin: 10px 0;
+  position: relative;
+}
+
+input {
+  background-color: rgba(248, 191, 191, 0.04);
+  border-radius: 20px;
+  border: 1px solid rgba(248, 191, 191);
+  outline: none;
+  padding: 15px 15px;
+  width: 100%;
+}
+
+.btns {
+  background: none;
+  border: none;
+  display: flex;
+  gap: 10px;
+  outline: none;
+  padding: 0;
+  place-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.error-icon {
+  visibility: hidden;
+}
+
+.error-msg {
+  color: var(--Desaturated-Red);
+  font-size: 12px;
+  padding-left: 20px;
+  text-align: left;
+  visibility: hidden;
+}
+
+.show-error-msg .error-icon,
+.show-error-msg .error-msg {
+  visibility: visible;
+}
+
+.submit-icon {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 12.5px 25px;
+}
+
+/* media query */
+@media screen and (min-width: 700px) {
+  .img-mobile {
+    display: none;
+  }
+
+  .img-desktop {
+    display: block;
+    grid-row: span 2;
+    margin-left: 50px;
+    width: 100%;
+  }
+
+  section {
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-size: contain;
+    grid-template-areas: auto;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 50px;
+    padding: 0;
+    width: 950px;
+  }
+
+  nav img {
+    padding-top: 3rem;
+    width: 150px;
+  }
+
+  article {
+    margin-bottom: 50px;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 3.1rem;
+  }
+}
+
+/* footer styles */
+footer img {
+  width: 100%;
+  height: 100%;
+}
+
+.my-profile {
+  align-items: center;
+  background: linear-gradient(hsl(0, 47%, 87%), hsl(0, 36%, 64%));
+  bottom: 0;
+  color: white;
+  display: flex;
+  font-size: 14px;
+  gap: 20px;
+  height: 5vh;
+  justify-content: center;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.my-profile > a {
+  color: hsla(127, 71%, 22%, 0.893);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.my-profile-icons a {
+  color: var(--White);
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+}
