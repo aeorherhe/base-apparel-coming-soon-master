@@ -139,7 +139,7 @@ input {
   .img-desktop {
     display: block;
     grid-row: span 2;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     width: 100%;
   }
 
@@ -148,8 +148,8 @@ input {
     background-size: contain;
     grid-template-areas: auto;
     grid-template-columns: repeat(2, 1fr);
-    padding-left: 50px;
     padding: 0;
+    padding-left: 50px;
     width: 950px;
   }
 
