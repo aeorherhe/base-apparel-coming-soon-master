@@ -73,13 +73,28 @@ article p:first-of-type {
   color: var(--Desaturated-Red);
   font-size: 14px;
   line-height: 1.5;
-  margin: 20px 0;
+  margin: 20px 0 30px;
 }
 
-label {
+.input-field {
   border-radius: 30px;
   margin: 10px 0;
   position: relative;
+  /* display: none; */
+}
+
+h2 {
+  color: var(--Desaturated-Red);
+  font-size: 2rem;
+  display: none;
+}
+
+.show-msg h2 {
+  display: block;
+}
+
+.show-msg .input-field {
+  display: none;
 }
 
 input {
@@ -128,6 +143,16 @@ input {
   cursor: pointer;
   outline: none;
   padding: 12.5px 25px;
+}
+
+.submit-icon:hover {
+  transform: translateX(2px);
+  box-shadow: 0 5px 7px hsl(0, 36%, 70%);
+  transition: var(--transition);
+}
+
+.hide-label {
+  display: none;
 }
 
 /* media query */
