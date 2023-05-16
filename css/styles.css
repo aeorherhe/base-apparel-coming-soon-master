@@ -190,6 +190,11 @@ input {
   h1 {
     font-size: 3.1rem;
   }
+
+  .my-profile {
+    position: fixed;
+    bottom: 0;
+  }
 }
 
 /* footer styles */
@@ -201,15 +206,12 @@ footer img {
 .my-profile {
   align-items: center;
   background: linear-gradient(hsl(0, 47%, 87%), hsl(0, 36%, 64%));
-  bottom: 0;
   color: white;
   display: flex;
   font-size: 14px;
   gap: 20px;
-  height: 5vh;
   justify-content: center;
   padding: 10px;
-  position: fixed;
   text-align: center;
   width: 100%;
 }
